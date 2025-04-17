@@ -101,7 +101,7 @@ MessageResult parse_udp_message(u8Vec raw_message) {
     break;
 
   case MESSAGE_BYE:
-    assert_min_len(7);
+    assert_min_len(5);
     parse_string(display_name, 3, 20, is_printable_nospace);
     break;
 
