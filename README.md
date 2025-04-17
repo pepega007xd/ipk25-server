@@ -149,7 +149,7 @@ Note that I am using [Nushell](https://www.nushell.sh/) as my system shell, whic
     ERR FROM Server IS Received invalid message
     BYE
     ```
-- Result: The server correctly rejects the message as invalid (maximum content length is 1400 characters)
+- Result: The server correctly rejects the message as invalid (maximum content length is 60000 characters)
 
 ## Bibliography
 

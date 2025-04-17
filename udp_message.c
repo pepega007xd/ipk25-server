@@ -67,7 +67,7 @@ MessageResult parse_udp_message(u8Vec raw_message) {
     message.ref_message_id =
         from_net_bytes(raw_message.content[4], raw_message.content[5]);
 
-    parse_string(message_content, 6, 1400, is_printable);
+    parse_string(message_content, 6, 60000, is_printable);
     assert_end();
     break;
 
@@ -89,14 +89,14 @@ MessageResult parse_udp_message(u8Vec raw_message) {
   case MESSAGE_MSG:
     assert_min_len(7);
     parse_string(display_name, 3, 20, is_printable_nospace);
-    parse_string(message_content, end + 1, 1400, is_printable);
+    parse_string(message_content, end + 1, 60000, is_printable);
     assert_end();
     break;
 
   case MESSAGE_ERR:
     assert_min_len(7);
     parse_string(display_name, 3, 20, is_printable_nospace);
-    parse_string(message_content, end + 1, 1400, is_printable);
+    parse_string(message_content, end + 1, 60000, is_printable);
     assert_end();
     break;
 
