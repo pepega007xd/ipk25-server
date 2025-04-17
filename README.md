@@ -1,4 +1,4 @@
-# IPK project 1
+# ipk24 server modified to somewhat work as ipk25 server
 
 ## Basic theory
 
